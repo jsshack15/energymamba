@@ -10,18 +10,19 @@
 <body>
 <%@ page import="java.sql.*" %>
 <% 
-   String userId=request.getParameter("userId");
-   String pass=request.getParameter("pass");
-   System.out.println("Username" +userId);
+   String userId=request.getParameter("form-email");
+   String pass=request.getParameter("PASSWORD");
+   String category="commercial";
+   System.out.println("email" +userId);
    System.out.println("password" +pass);
-   String repass=request.getParameter("repass");
+   String repass=request.getParameter("CONFIRM PASSWORD");
    if(pass.equals(repass))
 		{
 	    	try
 			{
 			    Connection c=ConnectionProvider.getConn();
 				Statement s=c.createStatement();
-				ResultSet rs=s.executeQuery("select * from testguser where userId='"+userId+"' and pass='"+pass+"'");
+				ResultSet rs=s.executeQuery("select * from mydbuser where userId='"+userId+"' and pass='"+pass+"'");
 				if(rs.next())
 				{
 				 
@@ -34,7 +35,7 @@
 				}
 				else
 				{
-				   int x=s.executeUpdate("insert into testguser values('"+userId+"','"+pass+"')");
+				   int x=s.executeUpdate("insert into mydbuser values('"+userId+"','"+pass+"','"+category+"')");
 				   //
 				   //
 				   //

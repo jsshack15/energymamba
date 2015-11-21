@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap Modal Registration Form Template</title>
+        <title>Registration Form</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -34,21 +34,20 @@
 
         <!-- Content -->
         <div class="top-content">
+        	
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                        	<a class="logo" href="index.html"></a>
-                            <h1><strong>Bootstrap</strong> Modal Registration Form</h1>
-                            <div class="description">
-                            	<p>
-	                            	This is a free responsive modal registration form made with Bootstrap. 
-	                            	Download it on <a href="http://azmind.com"><strong>AZMIND</strong></a>, customize and use it as you like!
-                            	</p>
-                            </div>
+                            <a class="logo" href="index.html"></a>
+                        	
+                            <h1><strong>Let's start to conserve the energy.</strong></h1>
+                            
                             <div class="top-big-link">
-                            	<a class="btn btn-link-1 launch-modal" href="#" data-modal-id="modal-register">Launch modal</a>
+                            	<a class="btn btn-link-1 launch-modal" href="#" data-modal-id="modal-register">START</a>
                             </div>
+                            <strong>Save Energy. Save Money. Save the Planet.</strong>
+
                         </div>
                     </div>
                 </div>
@@ -66,28 +65,34 @@
         					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
         				</button>
         				<h3 class="modal-title" id="modal-register-label">Sign up now</h3>
-        				<p>Fill in the form below to get instant access:</p>
+        				<p>Start conserving the energy</p>
         			</div>
         			
         			<div class="modal-body">
         				
-	                    <form role="form" method="post" class="registration-form" action=register.jsp>
+	                    <form role="form"  method="post" class="registration-form" action="register.jsp">
 	                    	<div class="form-group">
-	                    		<label class="sr-only" for="form-first-name">User ID</label>
-	                        	<input type="text" name="userId" placeholder="Your UserId..." class="form-first-name form-control" id="userId">
-	                        </div>
+                                <label class="sr-only" for="form-email">Email</label>
+                                <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                            </div>
 	                        <div class="form-group">
-	                        	<label class="sr-only" for="form-last-name">Password</label>
-	                        	<input type="text" name="pass" placeholder="Enter the password" class="form-last-name form-control" id="pass">
+	                        	<label class="sr-only" for="PASSWORD">Last name</label>
+	                        	<input type="text" name="PASSWORD" placeholder="PASSWORD..." class="form-last-name form-control" id="form-last-name">
 	                        </div>
-	                        <div class="form-group">
-	                        	<label class="sr-only" for="form-email">Email</label>
-	                        	<input type="text" name="repass" placeholder="Re eneter password" class="form-email form-control" id="repass">
-	                        </div>
-	                        <div class="form-group">
-	                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
-	                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-	                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                            <div class="form-group">
+                                <label class="sr-only" for="CONFIRM PASSWORD">Last name</label>
+                                <input type="text" name="CONFIRM PASSWORD" placeholder="CONFIRM PASSWORD..." class="form-last-name form-control" id="form-last-name">
+                            </div>
+	                        
+	                        <div  id="category">
+
+	                        	<strong>CATEGORY...</background></strong>
+                                <select width=40px;>
+                                    <option value="Household">Household</option>
+                                    <option value="Commercial">Commercial</option>
+                                </select>
+                            
+
 	                        </div>
 	                        <button type="submit" class="btn">Sign me up!</button>
 	                    </form>

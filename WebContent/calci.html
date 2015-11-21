@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<head>
+</head>
+<body>
+<h1>Please enter your details
+</h1>
+<form method="post" action="calculating.jsp">
+ 
+ Appliances: <select size="1" name="appliance" id="appliance">
+<option value=" Select"> Select</option>
+<option value="AC 1 Ton" >AC 1 Ton</option>
+<option value="AC 1.5 Ton">AC 1.5 Ton</option>
+<option value="AC 2 Ton">AC 2 Ton</option>
+<option value="Big Television">Big Television</option>
+<option value="CFL Lamp">CFL Lamp</option>
+<option value="Computer">Computer</option>
+<option value="Computer with Printer">Computer with Printer</option>
+<option value="Desert Cooler">Desert Cooler</option>
+<option value="Electric Iron">Electric Iron</option>
+<option value="Exhaust Fan">Exhaust Fan</option>
+<option value="Fan">Fan</option>
+<option value="House Atta Chakki">House Atta Chakki</option>
+<option value="Immersion Heater">Immersion Heater</option>
+<option value="Instant Geyser">Instant Geyser</option>
+<option value="Inverter">Inverter</option>
+<option value="Microwave Oven">Microwave Oven</option>
+<option value="Mixer Cum Grinder">Mixer Cum Grinder</option>
+<option value="Pump Motor">Pump Motor</option>
+<option value="Radio">Radio</option>
+<option value="Refrigerator 165 litres">Refrigerator 165 litres</option>
+<option value="Refrigerator 210 litres">Refrigerator 210 litres</option>
+<option value="Refrigerator 300 litres">Refrigerator 300 litres</option>
+<option value="Regular Lamp">Regular Lamp</option>
+<option value="Room Heater">Room Heater</option>
+<option value="Small Television">Small Television</option>
+<option value="Split AC">Split AC</option>
+<option value="Toaster">Toaster</option>
+<option value="Tube Light">Tube Light</option>
+<option value="Washing Machine">Washing Machine</option>
+<option value="Washing Machine with Dryer">Washing Machine with Dryer</option>
+<option value="Water Heater- Geyser">Water Heater- Geyser</option></select>
+  
+ Watt: <input type="text" name="watt" size="20" >
+ No. of Equipments:<select size="1" name="nequipments">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+ </select>
+ Hour use/Day:<select size="1" name="hourperday">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+  <option>21</option>
+  <option>22</option>
+  <option>23</option>
+  <option>24</option>
+ </select>
+ Day Use Per Month:<select size="1" name="daypermonth">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+  <option>21</option>
+  <option>22</option>
+  <option>23</option>
+  <option>24</option>
+  <option>25</option>
+  <option>26</option>
+  <option>27</option>
+  <option>28</option>
+  <option>29</option>
+  <option>30</option>
+  <option>31</option>
+ </select>
+ <br>
+ <input type="submit" value="Submit" >
+</form>
+
+
+<table id="myTable" style="width: 201px; height: 121px; ">
+  <tr>
+    <td>Row1 cell1</td>
+    <td>Row1 cell2</td>
+  </tr>
+  <tr>
+    <td>Row2 cell1</td>
+    <td>Row2 cell2</td>
+  </tr>
+  <tr>
+    <td>Row3 cell1</td>
+    <td>Row3 cell2</td>
+  </tr>
+</table>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() 
+{
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+}
+</script>
+
+</body>
+</html>
