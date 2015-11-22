@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="iso-8859-1">
-<title>Insert title here</title>
+<title>Calculator</title>
 <style type="text/css">
 #myTable tr th {
 	font-family: Arial, Helvetica, sans-serif;
@@ -23,28 +23,15 @@
 <head>
 </head>
 <body background="light bulb on2.JPG" >
-
-<%@ page import="java.sql.*" %>
-<%@ page import = "javax.servlet.RequestDispatcher" %>
-<%
-    
-   String userId=(String)session.getAttribute("userId");
-   String pass=(String)session.getAttribute("pass");
-   System.out.println(userId);
-   System.out.println(pass);
-%>
-
-
-
 <div >
 <div class="heading">
-<h1 align="center">Please enter your details
+<h1 align="center">Calculator
 </h1>
 </div>
 
 </div>
 <div class="border">
-<div class="font">
+<div class="font" style="font-family:Arial, Helvetica, sans-serif">
 <form name="elementsOfCalci">
  
   <p>Appliances:
@@ -271,17 +258,6 @@
     <th>Days used per month</th>
     <th>Energy Consumed(in Watts)</th><th>Energy Consumed per day(in KWH)</th>
     <th>Delete</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-    
-    
   </tr>
 </table>
 <h3 style="color:#CFF">Total Consumption(in KwH)</h3>

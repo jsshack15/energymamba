@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="iso-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+#myTable tr th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#myTable tr th {
+	font-family: Verdana, Geneva, sans-serif;
+}
+#myTable tr th {
+	color: #CFF;
+}
+.font form p {
+	color: #CFF;
+}
+.heading h1 {
+	color: #CFF;
+}
+</style>
+<head>
+</head>
+<body background="light bulb on2.JPG" >
+<div >
+<div class="heading">
+<h1 align="center">Please enter your details
+</h1>
+</div>
+
+</div>
+<div class="border">
+<div class="font">
+<form name="elementsOfCalci">
+ 
+  <p>Type of room:
+    <select size="1" name="appliance" id="appliance" style="font-family:Verdana, Geneva, sans-serif;">
+      
+      
+      <option value="AC 1 Ton" >Living Room</option>
+      <option value="AC 1.5 Ton">Bed Room</option>
+      <option value="AC 2 Ton">Dining Room</option>
+      <option value="Big Television">Office/Work Room</option>
+      <option value="CFL Lamp">Kitchen</option>
+      <option value="Computer">Hall</option>
+    </select>
+
+  
+ Room Size: 
+ <select size="1" name="watt">
+   <option>Small 12*18</option>
+   <option>Small 10*12</option>
+   
+   <option>Medium 16*20</option>
+   <option>Medium 12*16</option>
+ 
+   <option>Large 22*18</option>
+   <option>Large 14*18</option>
+ </select>
+ 
+ Hour use/Day:
+ <select size="1" name="hourperday">
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+   <option>4</option>
+   <option>5</option>
+   <option>6</option>
+   <option>7</option>
+   <option>8</option>
+   <option>9</option>
+   <option>10</option>
+   <option>11</option>
+   <option>12</option>
+   <option>13</option>
+   <option>14</option>
+   <option>15</option>
+   <option>16</option>
+   <option>17</option>
+   <option>18</option>
+   <option>19</option>
+   <option>20</option>
+   <option>21</option>
+   <option>22</option>
+   <option>23</option>
+   <option>24</option>
+ </select>
+ Day Use Per Month:
+ <select size="1" name="daypermonth">
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+   <option>4</option>
+   <option>5</option>
+   <option>6</option>
+   <option>6</option>
+   <option>7</option>
+   <option>8</option>
+   <option>9</option>
+   <option>10</option>
+   <option>11</option>
+   <option>12</option>
+   <option>13</option>
+   <option>14</option>
+   <option>15</option>
+   <option>16</option>
+   <option>17</option>
+   <option>18</option>
+   <option>19</option>
+   <option>20</option>
+   <option>21</option>
+   <option>22</option>
+   <option>23</option>
+   <option>24</option>
+   <option>25</option>
+   <option>26</option>
+   <option>27</option>
+   <option>28</option>
+   <option>29</option>
+   <option>30</option>
+   <option>31</option>
+ </select>
+ 
+  </p>
+  <p align="center">
+    <input TYPE="BUTTON" VALUE="Suggested Appliance " onClick="http://localhost:7001/Environment1/suggestedappliance.html">
+  </p>
+</form>
+</div>
+<!--<table width="500" height="90" border="1" cellspacing="1" cellpadding="1" border-coll;>
+  <tr>
+    <td>Appliances;</td>
+    <td>    Watt    </td>
+    <td>No. of equipments</td>
+    <td>Hours used per day</td>
+    <td>Days used per month</td>
+    <td>Energy Consumed(in Watts)</td><td>Energy Consumed per day(in KWH)</td>
+  </tr>
+</table>-->
+
+<div  style="font-family:Arial, Helvetica, sans-serif" align="center">
+<!-- 
+     <table id="myTable" width="800" height="90" border="1" cellspacing="2"  cellpadding="3" bg bgcolor="#FFFFFF">
+   <tr bgcolor="#00CCFF">
+    <th>Appliances</th>
+    <th>    Watt    </th>
+    <th>No. of equipments</th>
+    <th>Hours used per day</th>
+    <th>Days used per month</th>
+    <th>Energy Consumed(in Watts)</th><th>Energy Consumed per day(in KWH)</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+    
+    
+  </tr>
+</table>
+
+ -->
+
+
+</div>
+</div>
+<br>
+<br>
+<div align="center">
+<!-- <button onclick="myFunction()"  >Suggested Appliances</button>  -->
+</div>
+<style>
+.border 
+{ border-radius:25px;
+  border:2px solid #CFF;
+  padding:20px;
+  width:auto;
+  height:auto;
+  
+	}
+</style>
+<script>
+var sumofconsumption=0;
+var count=0;
+function display() 
+{
+  count= count + 1;
+  var appliance =      document.elementsOfCalci.appliance.value;
+  var dayPerMonth =    document.elementsOfCalci.daypermonth.value;
+  var watt =           document.elementsOfCalci.watt.value;
+  var HourPerDay =     document.elementsOfCalci.hourperday.value;
+  
+  /*
+  var table = document.getElementById("myTable");
+  var row   = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+  var cell8 = row.insertCell(7);
+  */
+  //var x     = document.createElement("BUTTON");
+  //var t     = document.createTextNode("DELETE");
+  /*
+  cell1.innerHTML = appliance;
+  cell2.innerHTML = watt;
+  cell3.innerHTML = noOfEquipement;
+  cell4.innerHTML = HourPerDay;
+  cell5.innerHTML = dayPerMonth;
+  */
+  
+  
+  
+  var suggestSmallequipments1=1 CFL;//20 watt
+  var suggestSmallequipments2=1 LED;//10 watt
+  var suggestSmallequipments3=1 ton AC;//1598 watt
+    
+  var ssw1=20;
+  var ssw2=10;
+  var ssw3=1598;
+	
+  var suggestMediumequipments1=2 CFL;
+  var suggestMediumequipments2=1 LED;
+  var suggestMediumequipments3=1.5 ton AC;//2300
+  
+  //var smw1=20;
+  //var ssw2=10;
+  var smw3=2300;
+  
+  var suggestLargeequipments1=2 CFL;
+  var suggestLargeequipments2=1 Flourescent Tube;
+  var suggestLargeequipments3=2.5 ton AC;//3100
+  
+  //var ssw1=20;
+  //var ssw2=10;
+  var slw3=3100;
+  
+  var n =  watt.localeCompare(Small 12*18);
+  var n2 = watt.localeCompare(Small 10*12);
+  var n3 = watt.localeCompare(Medium 16*20);
+  var n4 = watt.localeCompare(Medium 12*16);
+  var n5 = watt.localeCompare(Large 22*18);
+  var n6 = watt.localeCompare(Large 14*18);
+  if(n==0)
+  {
+    document.getElementById("puthere1").innerHTML=suggestSmallequipments1;
+	document.getElementById("puthere2").innerHTML=suggestSmallequipments2;
+	document.getElementById("puthere3").innerHTML=suggestSmallequipments3;
+  }
+  if(n2==0)
+  {
+    document.getElementById("puthere1").innerHTML=suggestSmallequipments1;
+	document.getElementById("puthere2").innerHTML=suggestSmallequipments2;
+	document.getElementById("puthere3").innerHTML=suggestSmallequipments3;
+  }
+  if(n3==0)
+  {
+    document.getElementById("puthere1").innerHTML=suggestMediumequipments1;
+	document.getElementById("puthere2").innerHTML=suggestMediumequipments2;
+	document.getElementById("puthere3").innerHTML=suggestMediumequipments3;
+  }
+  if(n4==0)
+  {
+    document.getElementById("puthere1").innerHTML=suggestMediumequipments1;
+	document.getElementById("puthere2").innerHTML=suggestMediumequipments2;
+	document.getElementById("puthere3").innerHTML=suggestMediumequipments3;
+  }
+  if(n5==0)
+  {
+    document.getElementById("puthere1").innerHTML=suggestLargeequipments1;
+	document.getElementById("puthere2").innerHTML=suggestLargeequipments2;
+	document.getElementById("puthere3").innerHTML=suggestLargeequipments3;
+  }
+  if(n6==0)
+  {
+    document.getElementById("puthere1").innerHTML=suggestLargeequipments1;
+	document.getElementById("puthere2").innerHTML=suggestLargeequipments2;
+	document.getElementById("puthere3").innerHTML=suggestLargeequipments3;
+  }
+  
+  
+  var consumption=((totalLoad*HourPerDay)/1000)*dayPerMonth;
+  cell7.innerHTML = consumption;
+  sumofconsumption= sumofconsumption + consumption;
+  
+  document.getElementById('total').innerHTML = sumofconsumption;
+  //x.appendChild(t);
+  
+  var x     = document.createElement("BUTTON");
+  var t     = document.createTextNode("DELETE");
+  x.appendChild(t);
+  cell8.appendChild(x);
+}
+
+</script>
+<p id="puthere1"></p>
+<p id="puthere2"></p>
+<p id="puthere3"></p>
+</body>
+</html>
